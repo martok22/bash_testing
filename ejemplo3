@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Testear paréntesis con comandos adentro. Supuestamente los paréntesis ejecutan comandos en un "subshell".
+
+
+# Esto sale bien
+#(echo "hola"; echo "chau";)
+
+# Esto no toma el segundo echo porque el primer echo no finalizó con las últimas comillas; hacen falta el punto y coma (;).
+#(echo "hola2", echo "chau2");
+
+# Se puede continuar una string en líneas separadas. Lo mismo para abrir y cerrar paréntesis. No se puede escribir abajo lo que va
+# después del echo.
+#(echo "hola como va 
+# aca seguimos en la misma linea";
+
+#	echo "este es el segundo comando";)
+
+(var1=chaucha; var2="celada"; echo $var1; echo $var2;)
+# Las variable se guardan de forma local, no son accesibles fuera de cada paréntesis.
+#echo $var1; 
+#(echo $var1;)
+
+(var1=10; var2=2; let var3=$var1*$var2; echo $var3;)
+
+#echo asd gfdogkop rmewrwkm lmlsdkf DFGDFGDFSFOKPOEWRK!°!!!!!!###""""%%%%"""";
+
+
+

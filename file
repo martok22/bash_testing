@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "adasdadasd";
+
+name="Martin";
+name2="Paula";
+
+if [ $name -gt $name2 ]; then echo "Hola"; else echo "chau";
+fi 
+
+# Da error: 'integer expected'. El operador greater than aplica solo para operaciones aritméticas, y las variables tienen string.|
